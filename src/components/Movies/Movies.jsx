@@ -15,7 +15,7 @@ const Movies = () => {
   return (
     <div>
       {movies.map((movie) => (
-        <div key={`${movie.id}`}>
+        <div key={`${movie.id}`} id={movie.id}>
           <Link to={`/${movie.id}`} className="link">
             <Movie
               image={movie.poster_path}

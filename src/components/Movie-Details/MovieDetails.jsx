@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMovies } from '../../redux/movies/movies';
 
@@ -37,9 +38,9 @@ const MovieDetails = () => {
         {movie.release_date}
       </p>
       <br />
-      <Link to="/">
+      <HashLink to={`/#${movie.id}`} smooth>
         <button type="button">Back</button>
-      </Link>
+      </HashLink>
     </div>
   );
 };

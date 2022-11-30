@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Movie from './Movie';
 import { fetchMovies } from '../../redux/movies/movies';
-import './Movies.css';
 
 const Movies = () => {
   const movies = useSelector((state) => state.movies);

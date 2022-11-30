@@ -11,7 +11,6 @@ const MovieDetails = () => {
   useEffect(() => { if (movies.length === 0) { dispatch(fetchMovies()); } }, []);
 
   const movie = movies.filter((movie) => movie.id === Number(path))[0];
-  console.log(movie);
 
   return (
     <div id={movie.id} key={`${movie.id}`}>

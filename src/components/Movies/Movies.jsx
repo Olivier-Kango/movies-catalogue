@@ -5,10 +5,12 @@ import Movie from './Movie';
 import { fetchMovies } from '../../redux/movies/movies';
 
 const Movies = () => {
-  const movies = useSelector((state) => state.movies);
+  const moviess = useSelector((state) => state.movies);
   const dispatch = useDispatch();
 
-  useEffect(() => { if (movies.length === 0) { dispatch(fetchMovies()); } }, []);
+  useEffect(() => { if (moviess.length === 0) { dispatch(fetchMovies()); } }, []);
+
+  const movies = Array.from(moviess).sort((a, b) => b.popularity - a.popularity);
 
   return (
     <div>

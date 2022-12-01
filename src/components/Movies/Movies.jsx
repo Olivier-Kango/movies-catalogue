@@ -45,6 +45,7 @@ const Movies = () => {
           id="search"
           name="search"
           ref={ref}
+          placeholder="Search Movies"
         />
         <button
           type="submit"

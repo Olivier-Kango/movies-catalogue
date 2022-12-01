@@ -11,7 +11,7 @@ const YearsFilter = (props) => {
 
   return (
     <div>
-      <span>Select By Year</span>
+      <span>Select By Release Year </span>
       <select
         onChange={onFilterValueChanged}
       >

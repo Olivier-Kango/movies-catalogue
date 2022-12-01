@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 // import { AppBar } from '@mui/material';
+import { searchMovie, fetchMovies } from '../../redux/movies/movies';
 import Movie from './Movie';
-import { fetchMovies } from '../../redux/movies/movies';
 import './Movies.css';
 
 const Movies = () => {
@@ -15,7 +15,7 @@ const Movies = () => {
 
   const ref = useRef(null);
   const handleClick = () => {
-    console.log('value is:', ref.current.value);
+    dispatch(searchMovie(ref.current.value));
   };
 
   return (

@@ -13,7 +13,7 @@ describe('Testing the MoviesDetails page:', () => {
         <Routes>
           <Route path="/:id" element={<MovieDetails />} />
         </Routes>
-      </Router>
+      </Router>,
     );
   });
   it('fectch Movies Details', () => {
@@ -22,7 +22,7 @@ describe('Testing the MoviesDetails page:', () => {
         <Routes>
           <Route path="/:id" element={<MovieDetails />} />
         </Routes>
-      </Router>
+      </Router>,
     );
     container.querySelector('.details');
     expect(container.firstChild).toMatchSnapshot();

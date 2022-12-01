@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import {
   BrowserRouter as Router,
@@ -17,17 +17,17 @@ describe('Testing the Movies page:', () => {
             <Route path="/" element={<Movies />} />
           </Routes>
         </Router>
-      </Provider>
+      </Provider>,
     );
   });
-  
+
   it('fectch Movie from API', () => {
     const { container } = render(
       <Router>
         <Routes>
           <Route path="/:id" element={<Movies />} />
         </Routes>
-      </Router>
+      </Router>,
     );
     container.querySelector('.movie');
     expect(container.firstChild).toMatchSnapshot();
@@ -39,7 +39,7 @@ describe('Testing the Movies page:', () => {
         <Routes>
           <Route path="/:id" element={<Movies />} />
         </Routes>
-      </Router>
+      </Router>,
     );
     container.querySelector('.movies');
     expect(container.firstChild).toMatchSnapshot();

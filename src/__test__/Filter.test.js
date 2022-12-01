@@ -11,7 +11,7 @@ describe('Testing the Years Filter', () => {
         <Movies>
           <YearsFilter />
         </Movies>
-      </Provider>
+      </Provider>,
     );
   });
 });

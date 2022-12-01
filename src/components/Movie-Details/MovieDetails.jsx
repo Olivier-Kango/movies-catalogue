@@ -10,7 +10,7 @@ const MovieDetails = () => {
   const movie = movies.filter((movie) => movie.id === Number(path))[0];
 
   return (
-    <div id={movie.id} key={`${movie.id}`}>
+    <div id={movie.id} key={`${movie.id}`} className="details">
       <h2>{movie.original_title}</h2>
       <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={`${movie.original_title}`} />
       <p>

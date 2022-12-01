@@ -19,16 +19,12 @@ export const fetchMovies = createAsyncThunk(FETCH_MOVIES, async (props) => {
     original_language: movie.original_language,
     overview: movie.overview,
     release_date: movie.release_date,
-    query: 'Home',
   }));
 });
 
 const Moviesslice = createSlice({
   name: 'movies',
   initialState: [],
-  reducers: {
-    searchMovie: (state, action) => (state.map((m) => ({ ...m, query: action.payload }))),
-  },
   extraReducers: (builder) => {
     builder.addCase(fetchMovies.fulfilled, (state, action) => action.payload);
   },

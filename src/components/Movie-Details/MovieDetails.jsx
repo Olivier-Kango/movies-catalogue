@@ -1,15 +1,11 @@
-import React, { useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import React from 'react';
 import { HashLink } from 'react-router-hash-link';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMovies } from '../../redux/movies/movies';
+import store from '../../redux/configureStore';
 
 const MovieDetails = () => {
   const url = window.location.href;
   const path = url.split('/')[3];
-  const movies = useSelector((state) => state.movies);
-  const dispatch = useDispatch();
-  useEffect(() => { if (movies.length === 0) { dispatch(fetchMovies()); } }, []);
+  const { movies } = store.getState();
 
   const movie = movies.filter((movie) => movie.id === Number(path))[0];
 

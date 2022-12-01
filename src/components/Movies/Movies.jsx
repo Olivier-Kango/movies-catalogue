@@ -13,26 +13,28 @@ const Movies = () => {
   const movies = Array.from(moviess).sort((a, b) => b.popularity - a.popularity);
 
   const ref = useRef(null);
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     dispatch(fetchMovies(ref.current.value));
   };
 
   return (
     <div>
       <navbar className="navbar">
-        <input
-          type="text"
-          id="search"
-          name="search"
-          ref={ref}
-        />
-        <button
-          type="button"
-          id="button-search"
-          onClick={handleClick}
-        >
-          Search
-        </button>
+        <form onSubmit={handleClick}>
+          <input
+            type="text"
+            id="search"
+            name="search"
+            ref={ref}
+          />
+          <button
+            type="submit"
+            id="button-search"
+          >
+            Search
+          </button>
+        </form>
       </navbar>
       <br className="br" />
       {movies.map((movie) => (

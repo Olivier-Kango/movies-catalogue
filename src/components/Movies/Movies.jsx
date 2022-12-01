@@ -33,7 +33,12 @@ const Movies = () => {
 
   return (
     <div className="container">
-      <h1>Movies Catalogue</h1>
+      <h1>
+        Movies Catalogue
+        (
+        {movies.length}
+        )
+      </h1>
       <form onSubmit={handleClick}>
         <input
           type="text"

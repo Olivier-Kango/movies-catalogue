@@ -21,7 +21,6 @@ const Movies = () => {
     return filterTextValue === movie.release_date.split('-')[0];
   });
 
-  console.log(movies);
   const ref = useRef(null);
   const handleClick = (e) => {
     e.preventDefault();
@@ -33,8 +32,8 @@ const Movies = () => {
   };
 
   return (
-    <div>
-      <h1>Family Movies Catalogue</h1>
+    <div className="container">
+      <h1>Movies Catalogue</h1>
       <form onSubmit={handleClick}>
         <input
           type="text"
@@ -51,21 +50,27 @@ const Movies = () => {
       </form>
       <YearsFilter loadedMovies={moviesAll} filterValueSelected={onFilterValueSelected} />
       <br className="br" />
-      {movies.map((movie) => (
-        <div key={`${movie.id}`} id={movie.id}>
-          <Link to={`/${movie.id}`} className="link">
-            <Movie
-              image={movie.poster_path}
-              id={movie.id}
-              key={`${movie.id}`}
-            />
-          </Link>
-          <p>
-            Popularity:&nbsp;
-            {movie.popularity}
-          </p>
-        </div>
-      ))}
+      <div className="movies">
+        {movies.map((movie) => (
+          <div
+            key={`${movie.id}`}
+            id={movie.id}
+            className="movie"
+          >
+            <Link to={`/${movie.id}`} className="link">
+              <Movie
+                image={movie.poster_path}
+                id={movie.id}
+                key={`${movie.id}`}
+              />
+            </Link>
+            <p>
+              Popularity:&nbsp;
+              {movie.popularity}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

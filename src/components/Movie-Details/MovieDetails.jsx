@@ -30,7 +30,7 @@ const MovieDetails = () => {
         {movie.overview}
       </p>
       <p>
-        <strong>Realease date: </strong>
+        <strong>Release date: </strong>
         {movie.release_date}
       </p>
       <br />

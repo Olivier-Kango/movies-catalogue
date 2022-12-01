@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-// import { AppBar } from '@mui/material';
 import { searchMovie, fetchMovies } from '../../redux/movies/movies';
 import Movie from './Movie';
 import './Movies.css';
@@ -10,12 +9,14 @@ const Movies = () => {
   const moviess = useSelector((state) => state.movies);
   const dispatch = useDispatch();
 
-  useEffect(() => { if (moviess.length === 0) { dispatch(fetchMovies()); } }, []);
   const movies = Array.from(moviess).sort((a, b) => b.popularity - a.popularity);
+
+  useEffect(() => dispatch(fetchMovies('Home')), []);
 
   const ref = useRef(null);
   const handleClick = () => {
     dispatch(searchMovie(ref.current.value));
+    dispatch(fetchMovies(ref.current.value));
   };
 
   return (
@@ -25,8 +26,6 @@ const Movies = () => {
           type="text"
           id="search"
           name="search"
-          defaultValue="Home"
-          // value={search}
           ref={ref}
         />
         <button

@@ -1,10 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import getMoviesApi from '../../api/moviesApi';
+import axios from 'axios';
 
 const FETCH_MOVIES = 'FETCH_MOVIES';
 
-export const fetchMovies = createAsyncThunk(FETCH_MOVIES, async () => {
-  const response = await getMoviesApi();
+export const fetchMovies = createAsyncThunk(FETCH_MOVIES, async (props) => {
+  const key = 'fd692f2bca8c5c05526b5565f2b36fec';
+  const response = await axios.create({
+    baseURL: `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${props}`,
+  }).get();
   const movies = response.data.results;
   return movies.map((movie) => ({
     id: movie.id,

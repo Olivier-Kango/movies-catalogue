@@ -11,7 +11,7 @@ export const fetchMovies = createAsyncThunk(FETCH_MOVIES, async (props) => {
   const movies = response.data.results;
   return movies.map((movie) => ({
     id: movie.id,
-    original_title: movie.original_title,
+    title: movie.title,
     poster_path: movie.poster_path,
     backdrop_path: movie.backdrop_path,
     popularity: movie.popularity,

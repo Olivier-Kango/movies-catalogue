@@ -34,7 +34,7 @@ const MovieDetails = () => {
         <strong>Original language: </strong>
         {originalLanguage}
       </p>
-      <p>
+      <p className="overview">
         <strong>Overview: </strong>
         {overview}
       </p>

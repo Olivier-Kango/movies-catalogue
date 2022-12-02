@@ -1,0 +1,29 @@
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+ 
+  div {
+    border: 1px solid rgba(255, 255, 255, 0.112);
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.123);
+    border-radius: 7px;
+    transform-style: preserve-3d;
+    transition: all 0.2s ease-in-out;
+    img {
+      width: 350px;
+      margin: 0;
+      border-radius: 7px 7px 0 0;
+    }
+    p {
+      margin: 0 0 5px 0;
+      color: rgba(255, 255, 255, 0.648);
+    }
+  }
+  div:hover {
+    transform: rotateY(12deg);
+    border: 1.5px solid rgba(255, 255, 255, 0.345);
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.345);
+  }
+}

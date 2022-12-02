@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
+$color: #4369B2;
+
+body {
+  background: $color;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.container {
+  h1 {
+    margin: 15px 0;
+  }
+
+  form {
+    margin: 0 0 10px 0;
+    input {
+      border: none;
+      padding: 7px 15px;
+      width: 50%;
+      border-radius: 29.75px 0 0 29.75px;
+      max-width: 380px;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    input:hover {
+      background: rgba(255, 255, 255, 0.87)
+    }
+
+    button {
+      border: none;
+      padding: 7px 15px;
+      border-radius: 0 29.75px 29.75px 0;
+      background: white;
+      cursor: pointer;
+      i {
+        color: rgb(128, 128, 128);
+      }
+      i:hover {
+        color: rgb(0, 0, 0);
+      }
+    }
+
+    button:hover {
+      background: rgba(255, 255, 255, 0.87);
+    }
+  }
+
+  select:focus {
+    outline: none;
+  }
+
+  select {
+    border-radius: 7px;
+  }
+
+  select:hover {
+    background: rgba(255, 255, 255, 0.87)
+  }
+
+  footer {
+    margin: 20px;
+    font-style: italic;
+    a {
+      color: white;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 import store from '../../redux/configureStore';
+import '../../styling/Details.scss';
 
 const MovieDetails = () => {
   const url = window.location.href;

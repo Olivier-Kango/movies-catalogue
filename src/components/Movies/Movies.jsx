@@ -4,12 +4,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchMovies } from '../../redux/movies/movies';
 import Movie from './Movie';
 import YearsFilter from '../Filter/Filter';
-import './Movies.css';
+import '../../styling/Movies.scss';
+import '../../styling/Home.scss';
 
 const Movies = () => {
   const moviess = useSelector((state) => state.movies);
   const dispatch = useDispatch();
-  useEffect(() => { if (moviess.length === 0) { dispatch(fetchMovies('Home')); } }, []);
+  useEffect(() => { if (moviess.length === 0) { dispatch(fetchMovies('Family')); } }, []);
 
   const moviesAll = Array.from(moviess).sort((a, b) => b.popularity - a.popularity);
   const [filterTextValue, updateFilterText] = useState('All');
@@ -51,7 +52,7 @@ const Movies = () => {
           type="submit"
           id="button-search"
         >
-          Search
+          <i className="fa fa-search" />
         </button>
       </form>
       <YearsFilter loadedMovies={moviesAll} filterValueSelected={onFilterValueSelected} />
@@ -77,6 +78,14 @@ const Movies = () => {
           </div>
         ))}
       </div>
+      <footer>
+        <p>
+          Created by&nbsp;
+          <a href="mailto: olivierkango@gmail.com">
+            Olivier Kango
+          </a>
+        </p>
+      </footer>
     </div>
   );
 };

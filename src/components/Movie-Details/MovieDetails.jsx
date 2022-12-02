@@ -1,45 +1,68 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import store from '../../redux/configureStore';
+import PropTypes from 'prop-types';
 import '../../styling/Details.scss';
 
 const MovieDetails = () => {
-  const url = window.location.href;
-  const path = url.split('/')[3];
-  const { movies } = store.getState();
+  const location = useLocation();
 
-  const movie = movies.filter((movie) => movie.id === Number(path))[0];
+  const {
+    popularity,
+    id,
+    voteCount,
+    backdropPath,
+    originalLanguage,
+    title,
+    overview,
+    releaseDate,
+  } = location.state;
 
   return (
-    <div id={movie.id} key={`${movie.id}`} className="details">
-      <h2>{movie.original_title}</h2>
-      <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={`${movie.original_title}`} />
+    <div className="details">
+      <h2>{title}</h2>
+      <img src={`https://image.tmdb.org/t/p/w500${backdropPath}`} alt={`${title}`} />
       <p>
         <strong>Popularity: </strong>
-        {movie.popularity}
+        {popularity}
       </p>
       <p>
         <strong>Vote count: </strong>
-        {movie.vote_count}
+        {voteCount}
       </p>
       <p>
         <strong>Original language: </strong>
-        {movie.original_language}
+        {originalLanguage}
       </p>
       <p>
         <strong>Overview: </strong>
-        {movie.overview}
+        {overview}
       </p>
       <p>
         <strong>Release date: </strong>
-        {movie.release_date}
+        {releaseDate}
       </p>
       <br />
-      <HashLink to={`/#${movie.id}`} smooth>
+      <HashLink to={`/#${id}`} smooth>
         <button type="button">Back</button>
       </HashLink>
     </div>
   );
+};
+
+MovieDetails.propTypes = {
+  location: PropTypes.shape({
+    state: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      popularity: PropTypes.number.isRequired,
+      voteCount: PropTypes.number.isRequired,
+      backdropPath: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      originalLanguage: PropTypes.string.isRequired,
+      overview: PropTypes.string.isRequired,
+      releaseDate: PropTypes.string.isRequired,
+    }),
+  }).isRequired,
 };
 
 export default MovieDetails;

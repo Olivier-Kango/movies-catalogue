@@ -10,7 +10,7 @@ import '../../styling/Home.scss';
 const Movies = () => {
   const moviess = useSelector((state) => state.movies);
   const dispatch = useDispatch();
-  useEffect(() => { if (moviess.length === 0) { dispatch(fetchMovies('Family')); } }, []);
+  useEffect(() => { if (moviess.length === 0) { dispatch(fetchMovies('Home')); } }, []);
 
   const moviesAll = Array.from(moviess).sort((a, b) => b.popularity - a.popularity);
   const [filterTextValue, updateFilterText] = useState('All');
@@ -64,7 +64,20 @@ const Movies = () => {
             id={movie.id}
             className="movie"
           >
-            <Link to={`/${movie.id}`} className="link">
+            <Link
+              to={`/${movie.id}`}
+              state={{
+                id: movie.id,
+                popularity: movie.popularity,
+                voteCount: movie.vote_count,
+                backdropPath: movie.backdrop_path,
+                title: movie.title,
+                originalLanguage: movie.original_language,
+                overview: movie.overview,
+                releaseDate: movie.release_date,
+              }}
+              className="link"
+            >
               <Movie
                 image={movie.poster_path}
                 id={movie.id}

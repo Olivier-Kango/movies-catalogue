@@ -34,30 +34,30 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Animation Movies Catalogue <a id="about-project"></a>
+# 📖 Movies Catalogue <a id="about-project"></a>
 
->  In this task, we will be working with the real live data from the SpaceX API. Our task is to build a web application for a company that provides commercial and scientific space travel services.
+>  This application allows the user to search for their favorite movies classified by popularity with the possibility of filtering them by release year.
 
-**Animation Movies Catalogue** is a an application which can allow users to book rockets and join selected space missions.
+**Movies Catalogue** retrieves data from this [API](https://api.themoviedb.org/3/search/movie?api_key=fd692f2bca8c5c05526b5565f2b36fec&query=Home).
 
 Please click on the video below to more explanation
 
 ## Video for explanation
 
-[<img width="500" alt="calculator" src="https://user-images.githubusercontent.com/108806646/204026408-a55bf2f5-227a-42d9-99f9-79d5168ca009.png">](https://www.youtube.com/watch?v=0xHiAKMv8yI)
+[<img width="427" alt="loom" src="https://user-images.githubusercontent.com/108806646/205190428-7ab21287-88bd-4350-b18b-04146e0705dc.png">](https://www.loom.com/share/9b46f373ab0b4253808dcba82accb7a3)
 
 ## 🛠 Built With <a id="built-with"></a>
 
 ### Tech Stack <a id="tech-stack"></a>
 
-> To build this project we used a tech stack detailed below:
+> To build this project I used a tech stack detailed below:
 
 <details>
   <summary>Client</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
     <li><a href="https://redux.js.org/">Redux</a></li>
-    <li><a href="https://www.w3schools.com/css/css_intro.asp">CSS</a></li>
+    <li><a href="https://www.w3schools.com/css/css_intro.asp">SCSS</a></li>
   </ul>
 </details>
 
@@ -65,9 +65,9 @@ Please click on the video below to more explanation
 
 ### Key Features <a id="key-features"></a>
 
-- **User Can book a rocket**
-- **user can see his profile with reserved rockets and mmissions**
-- **User can Cancel his booking any time.**
+- **User Can Search Movies**
+- **user can Filter Movies by Release Date**
+- **User can See Details about a Movie**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,7 +77,7 @@ Please click on the video below to more explanation
 
 > Please click the link below to open our webpage in your browser
 
-- [Live Demo Link](https://spacetravelersod.netlify.app/)
+- [Live Demo Link](https://moviescatalogue-olivier.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,7 +102,7 @@ Clone this repository to your desired folder:
 2. Clone this repo in your terminal or git bash using the command
 
    ```
-     git clone <URL> 'https://github.com/Olivier-Kango/space-travelers-hub' in your terminal
+     git clone <URL> 'https://github.com/Olivier-Kango/movies-catalogue' in your terminal
       
    ```
 
@@ -147,7 +147,7 @@ You can deploy this project using:
 
 ## 👥 Authors <a id="authors"></a>
 
-> This project was built by two Developers:
+> This project was built by:
 
 
 👤 **Olivier Kango**
@@ -156,20 +156,15 @@ You can deploy this project using:
 - Twitter: [@twitterolivier](https://twitter.com/olivierkango1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/olivier-kango-b990601b8/)
 
-👤 **Degisew**
-- GitHub: [degisew](https://github.com/degisew)
-- Twitter: [@DJ_etiya](https://twitter.com/Degisew-mengist)
-- LinkedIn: [degisew](https://www.linkedin.com/in/degisew-mengist)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a id="future-features"></a>
 
-- **We will add a dragon page**
-- **we will add a little inspirational quote**
-- **we will add about us page**
+- **I will implement some UX improvements: include transitions and/or animations, etc.**
+- **I will implement additional pages in the website (each with a route in the SPA): about me, references, etc.**
+- **Make sure that you have a decent desktop design for the webapp**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -179,7 +174,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Olivier-Kango/space-travelers-hub/issues/new).
+Feel free to check the [issues page](https://github.com/Olivier-Kango/movies-catalogue/issues/new).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

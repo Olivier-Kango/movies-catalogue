@@ -195,7 +195,11 @@ Feel free to check the [issues page](https://github.com/Olivier-Kango/space-trav
 
 ## 🙏 Acknowledgments <a id="acknowledgements"></a>
 
-> Thanks to Microverse and my Coding Partners
+I would like to thank:
+
+- [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the website design system that inspired my design.
+- [TMDB](https://www.themoviedb.org/documentation/api) for the amazing Movies API.
+- Theophile Kango and My cording partners.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

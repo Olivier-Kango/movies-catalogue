@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the Movies page: Display Movies from API 1`] = `null`;
+
+exports[`Testing the Movies page: fectch Movie from API 1`] = `null`;

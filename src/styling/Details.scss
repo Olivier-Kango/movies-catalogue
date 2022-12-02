@@ -1,5 +1,12 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:400,700');
+
 .details {
+  font-family: 'Lato', sans-serif;
   padding-bottom: 20px;
+
+  h2 {
+    font-family: 'Gill Sans', sans-serif;
+  }
 
   .overview {
     width: 500px;

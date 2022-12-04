@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { HashLink } from 'react-router-hash-link';
 import { fetchMovies } from '../../redux/movies/movies';
 import Movie from './Movie';
 import YearsFilter from '../Filter/Filter';
@@ -33,7 +34,7 @@ const Movies = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" id="top">
       <h1>
         Movies Catalogue
         (
@@ -92,6 +93,7 @@ const Movies = () => {
         ))}
       </div>
       <footer>
+        <HashLink to="#top" className="to-top" smooth>back to top ↑</HashLink>
         <p>
           Created by&nbsp;
           <a href="mailto: olivierkango@gmail.com">

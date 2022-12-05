@@ -20,7 +20,7 @@ const Movies = () => {
     if (filterTextValue === 'All') {
       return movie;
     }
-    return filterTextValue === movie.release_date.split('-')[0];
+    return filterTextValue === movie.release_date?.split('-')[0];
   });
 
   const ref = useRef(null);

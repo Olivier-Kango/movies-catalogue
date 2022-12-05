@@ -92,6 +92,7 @@ const Movies = () => {
           </div>
         ))}
       </div>
+      {movies.length === 0 ? <p className="no-movies-found">no movies found</p> : ''}
       <footer>
         <HashLink to="#top" className="to-top" smooth>back to top ↑</HashLink>
         <p>

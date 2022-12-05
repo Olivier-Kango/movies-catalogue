@@ -16,7 +16,7 @@ const YearsFilter = (props) => {
         onChange={onFilterValueChanged}
       >
         <option>All</option>
-        {loadedMovies.map((elt) => elt.release_date.split('-')[0])
+        {loadedMovies.map((elt) => elt.release_date?.split('-')[0])
           .filter((v, i, a) => a.indexOf(v) === i)
           .sort((a, b) => b - a)
           .map((year) => (

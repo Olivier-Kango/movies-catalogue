@@ -12,7 +12,7 @@ $color: #4369b2;
     box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.123);
     border-radius: 7px;
     transform-style: preserve-3d;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
     background: $color;
 
     img {
@@ -29,9 +29,10 @@ $color: #4369b2;
   }
 
   div:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
     border: 1.5px solid rgba(255, 255, 255, 0.345);
     box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.345);
     z-index: 2;
+    border-radius: 0;
   }
 }

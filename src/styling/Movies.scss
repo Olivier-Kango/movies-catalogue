@@ -1,3 +1,5 @@
+$color: #4369b2;
+
 .movies {
   display: flex;
   flex-wrap: wrap;
@@ -10,7 +12,8 @@
     box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.123);
     border-radius: 7px;
     transform-style: preserve-3d;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    background: $color;
 
     img {
       width: 350px;
@@ -26,8 +29,9 @@
   }
 
   div:hover {
-    transform: rotateY(12deg);
+    transform: scale(1.2);
     border: 1.5px solid rgba(255, 255, 255, 0.345);
     box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.345);
+    z-index: 2;
   }
 }

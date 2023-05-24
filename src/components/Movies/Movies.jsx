@@ -5,8 +5,8 @@ import { HashLink } from 'react-router-hash-link';
 import { fetchMovies } from '../../redux/movies/movies';
 import Movie from './Movie';
 import YearsFilter from '../Filter/Filter';
-import '../../styling/Movies.scss';
-import '../../styling/Home.scss';
+import './Movies.scss';
+import './Home.scss';
 
 const Movies = () => {
   const moviess = useSelector((state) => state.movies);

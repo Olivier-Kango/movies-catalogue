@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import PropTypes from 'prop-types';
-import '../../styling/Details.scss';
+import './Details.scss';
 
 const MovieDetails = () => {
   const location = useLocation();

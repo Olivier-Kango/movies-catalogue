@@ -11,7 +11,7 @@ import './Home.scss';
 const Movies = () => {
   const moviess = useSelector((state) => state.movies);
   const dispatch = useDispatch();
-  useEffect(() => { if (moviess.length === 0) { dispatch(fetchMovies('Marvel')); } }, []);
+  useEffect(() => { if (moviess.length === 0) { dispatch(fetchMovies('miracles')); } }, []);
 
   const moviesAll = Array.from(moviess).sort((a, b) => b.popularity - a.popularity);
   const [filterTextValue, updateFilterText] = useState('All');
